@@ -4,13 +4,13 @@
 bwa mem Homo_sapiens.GRCh37.GATK.illumina/Homo_sapiens.GRCh37.GATK.illumina.fasta datafiles/na12878_wes_brcagenes-1.fastq datafiles/na12878_wes_brcagenes-2.fastq > na12878_wes.sam
 
 # Create BAM file
-sambamba view -S -f bam na12878_wes.sam > na12878_wes.bam
+sambamba view -S -f bam \na12878_wes.sam > \na12878_wes.bam
 
 # Mark duplicates
-sambamba markdup na12878_wgs.sorted.bam dedupped_na12878_wes.sorted.bam
+sambamba markdup \na12878_wgs.sorted.bam dedupped_na12878_wes.sorted.bam
 
 # Sort the BAM file
-sambamba sort na12878_wes.bam
+sambamba sort \na12878_wes.bam
 
 # Add readgroups
 java -jar $PICARD AddOrReplaceReadGroups \
