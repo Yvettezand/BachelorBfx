@@ -17,7 +17,7 @@ java -jar $PICARD AddOrReplaceReadGroups \
 I= dedupped_na12878_wes.sorted.bam \
 O= RG_dedupped_na12878_wes.sorted.bam \
 CREATE_INDEX=true \
-RGLB=LB WES \
+RGLB=LB wes \
 RGPL=PL illumina \
 RGSM=SM na12878 \
 RGPU=PU slide_barcode
